@@ -229,7 +229,7 @@ const Sidebar = (props) => {
             </InputGroup>
           </Form>
 
-          <h6 className="navbar-heading text-muted">Documentation</h6>
+          <h6 className="navbar-heading text-muted">Danh mục</h6>
           <hr className="my-3" />
           <Nav navbar>{createLinks(routes)}</Nav>
 

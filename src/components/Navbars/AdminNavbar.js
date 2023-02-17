@@ -85,7 +85,7 @@ const AdminNavbar = (props) => {
                 <DropdownItem divider />
                 <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
                   <i className="ni ni-user-run" />
-                  <span>Logout</span>
+                  <span>Đăng xuất</span>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
