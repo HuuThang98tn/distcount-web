@@ -33,12 +33,15 @@ import {
   Table,
   Container,
   Row,
-  UncontrolledTooltip
+  UncontrolledTooltip,
+  Dropdown
 } from "reactstrap";
 // core components
 import Header from "components/Headers/Header.js";
+import { useState } from "react";
 
 const Tables = () => {
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <>
       <Header />
@@ -62,6 +65,8 @@ const Tables = () => {
                     <th scope="col">Số điện thoại</th>
                     <th scope="col">Tổng tiền nạp</th>
                     <th scope="col">Tổng tiền rút</th>
+                    <th scope="col">Số tài khoản người dùng</th>
+                    <th scope="col">Trạng thái tài khoản</th>
                     <th scope="col">Trạng thái tài khoản</th>
                     <th scope="col" />
                   </tr>
@@ -111,6 +116,29 @@ const Tables = () => {
                           />
                         </div>
                       </div>
+                    </td>
+                    <td>
+                      <Dropdown
+                        isOpen={isOpen}
+                        toggle={function noRefCheck() {
+                          setIsOpen(!isOpen)
+                        }}>
+                        <DropdownToggle
+                          data-toggle="dropdown"
+                          tag="span"
+                        >
+                          <h3 className="text-white">8505236589012</h3>
+
+                        </DropdownToggle>
+                        <DropdownMenu>
+                          <p className="ml-2" >
+                            3505236589012
+                          </p>
+                          <p className="ml-2">
+                            2505236589012
+                          </p>
+                        </DropdownMenu>
+                      </Dropdown>
                     </td>
 
                   </tr>

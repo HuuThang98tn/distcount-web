@@ -17,11 +17,12 @@
 */
 import Index from "views/Index.js";
 import Profile from "views/examples/Profile.js";
-import Maps from "views/examples/Maps.js";
+import Setting from "views/examples/Setting.js";
 import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
+import OrderManagement from "views/examples/OrderManagement";
 
 var routes = [
   {
@@ -49,7 +50,14 @@ var routes = [
     path: "/maps",
     name: "Cài đặt",
     icon: "ni ni-pin-3 text-orange",
-    component: Maps,
+    component: Setting,
+    layout: "/admin"
+  },
+  {
+    path: "/user-order-management",
+    name: "Quản lý đơn hàng",
+    icon: "ni ni-single-02 text-yellow",
+    component: OrderManagement,
     layout: "/admin"
   },
   {
